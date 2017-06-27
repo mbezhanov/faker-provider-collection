@@ -1,0 +1,27 @@
+{
+    "name": "mbezhanov/faker-provider-collection",
+    "description": "A collection of custom providers for the Faker library",
+    "keywords": ["faker", "fixtures", "data"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marin Bezhanov",
+            "email": "marin.bezhanov@gmail.com",
+            "homepage": "http://marinbezhanov.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Bezhanov\\Faker\\": "src/Faker" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Bezhanov\\Tests\\Faker\\": "tests/Faker" }
+    },
+    "require": {
+        "php": "^7.0",
+        "fzaninotto/faker": "^1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.2"
+    }
+}
