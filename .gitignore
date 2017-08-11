@@ -2,3 +2,4 @@
 /coverage/
 /vendor/
 test.php
+clover.xml
