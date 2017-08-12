@@ -11,6 +11,8 @@ class ProviderCollectionHelper
     {
         $faker->addProvider(new Provider\Avatar($faker));
         $faker->addProvider(new Provider\Commerce($faker));
+        $faker->addProvider(new Provider\Demographic($faker));
+        $faker->addProvider(new Provider\Educator($faker));
         $faker->addProvider(new Provider\Food($faker));
         $faker->addProvider(new Provider\Placeholder($faker));
         $faker->addProvider(new Provider\Team($faker));
