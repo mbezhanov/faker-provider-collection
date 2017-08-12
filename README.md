@@ -45,22 +45,6 @@ $faker->avatar('foo', '300x300', 'jpg', 'set2', 'bg2'); // https://robohash.org/
 
 ```
 
-### `Bezhanov\Faker\Provider\Food`
-
-Generates ingredient names, spice names, and recipe measurements.
-
-```php
-<?php
-
-$faker = \Faker\Factory::create();
-$faker->addProvider(new \Bezhanov\Faker\Provider\Food($faker));
-
-$faker->ingredient; // Hazelnut
-$faker->spice; // Chamomile
-$faker->measurement; // 1 pint
-
-```
-
 ### `Bezhanov\Faker\Provider\Commerce`
 
 Generates product and department data for e-commerce websites and online stores.
@@ -76,6 +60,39 @@ $faker->department; // Kids & Games
 $faker->department(6); // Games, Industrial, Books & Automotive
 $faker->department(3, true); // Jewelry, Music & Shoes
 $faker->productName; // Small Rubber Bottle
+
+```
+
+### `Bezhanov\Faker\Provider\Educator`
+
+Generates secondary school and university names, and course names.
+
+```php
+<?php
+
+$faker = \Faker\Factory::create();
+$faker->addProvider(new \Bezhanov\Faker\Provider\Educator($faker));
+
+$faker->university; // Clearcourt University
+$faker->secondarySchool; // Mallowpond High
+$faker->course; // Bachelor of Forensic Science
+$faker->campus; // Brighthurst Campus
+
+```
+
+### `Bezhanov\Faker\Provider\Food`
+
+Generates ingredient names, spice names, and recipe measurements.
+
+```php
+<?php
+
+$faker = \Faker\Factory::create();
+$faker->addProvider(new \Bezhanov\Faker\Provider\Food($faker));
+
+$faker->ingredient; // Hazelnut
+$faker->spice; // Chamomile
+$faker->measurement; // 1 pint
 
 ```
 
