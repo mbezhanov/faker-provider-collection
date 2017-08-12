@@ -63,6 +63,26 @@ $faker->productName; // Small Rubber Bottle
 
 ```
 
+### `Bezhanov\Faker\Provider\Demographic`
+
+Generates random demographic data, such as: race, gender, demonym, educational attainment, height
+
+```php
+<?php
+
+$faker = \Faker\Factory::create();
+$faker->addProvider(new \Bezhanov\Faker\Provider\Demographic($faker));
+
+$faker->race; // Asian
+$faker->educationalAttainment; // Master's degree
+$faker->demonym; // Bulgarian
+$faker->maritalStatus; // Married
+$faker->gender; // Female
+$faker->height; // 1.99
+$faker->height(Demographic::UNIT_TYPE_IMPERIAL); // 7 ft, 2 in
+
+```
+
 ### `Bezhanov\Faker\Provider\Educator`
 
 Generates secondary school and university names, and course names.

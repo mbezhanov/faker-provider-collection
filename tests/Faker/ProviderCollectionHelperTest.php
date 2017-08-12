@@ -12,6 +12,6 @@ class ProviderCollectionHelperTest extends TestCase
     {
         $faker = new Generator();
         ProviderCollectionHelper::addAllProvidersTo($faker);
-        $this->assertEquals(5, count($faker->getProviders()));
+        $this->assertEquals(7, count($faker->getProviders()));
     }
 }
