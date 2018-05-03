@@ -35,7 +35,7 @@ class Commerce extends Base
         }
 
         for ($i = 0; $i < $max; $i++) {
-            $categories[] = $this->generator->unique()->category;
+            $categories[] = $this->generator->category;
         }
 
         if (count($categories) >= 2) {
