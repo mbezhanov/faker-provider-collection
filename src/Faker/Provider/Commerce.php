@@ -33,9 +33,10 @@ class Commerce extends Base
         if (!$fixedAmount) {
             $max = mt_rand(1, $max);
         }
+        $uniqueGenerator = $this->generator->unique(true);
 
         for ($i = 0; $i < $max; $i++) {
-            $categories[] = $this->generator->unique()->category;
+            $categories[] = $uniqueGenerator->category;
         }
 
         if (count($categories) >= 2) {
