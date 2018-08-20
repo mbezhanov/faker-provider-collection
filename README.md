@@ -63,6 +63,25 @@ $faker->productName; // Small Rubber Bottle
 
 ```
 
+### `Bezhanov\Faker\Provider\Device`
+
+Generates random mobile device specifications
+
+```php
+<?php
+
+$faker = \Faker\Factory::create();
+$faker->addProvider(new \Bezhanov\Faker\Provider\Device($faker));
+
+$faker->deviceBuildNumber; // 186
+$faker->deviceManufacturer; // Apple
+$faker->deviceModelName; // iPhone 4
+$faker->devicePlatform; // Ubuntu Touch
+$faker->deviceSerialNumber; // ejfjnRNInxh0363JC2WM
+$faker->deviceVersion; // 812
+
+```
+
 ### `Bezhanov\Faker\Provider\Demographic`
 
 Generates random demographic data, such as: race, gender, demonym, educational attainment, height
@@ -132,6 +151,50 @@ $faker->placeholder('250x250', 'jpg'); // https://placehold.it/250x250.jpg
 $faker->placeholder('250x250', 'jpg', 'ff0000'); // https://placehold.it/250x250.jpg/ff0000
 $faker->placeholder('250x250', 'jpg', 'f00', '000000'); // https://placehold.it/250x250.jpg/f00/000000
 $faker->placeholder('250x250', 'jpg', 'ff0000', '000', 'test'); // https://placehold.it/250x250.jpg/ff0000/000?text=test
+
+```
+
+### `Bezhanov\Faker\Provider\Science`
+
+Generates names of scientists and chemical elements
+
+```php
+<?php
+
+$faker = \Faker\Factory::create();
+$faker->addProvider(new \Bezhanov\Faker\Provider\Science($faker));
+
+$faker->chemicalElement; // Radium
+$faker->chemicalElementSymbol; // Fe
+$faker->scientist; // Max Planck
+
+```
+
+
+### `Bezhanov\Faker\Provider\Space`
+
+Generates names of astronomical objects, distance measurements, spacecrafts, etc.
+
+```php
+<?php
+
+$faker = \Faker\Factory::create();
+$faker->addProvider(new \Bezhanov\Faker\Provider\Space($faker));
+
+$faker->planet; // Neptune
+$faker->moon; // Europa
+$faker->galaxy; // Andromeda
+$faker->nebula; // Orion Nebula
+$faker->starCluster; // Palomar 6
+$faker->constellation; // Ursa Major
+$faker->star; // Luyten 726-8B
+$faker->agency; // Japan Aerospace Exploration Agency
+$faker->agencyAbv; // NASA
+$faker->nasaSpaceCraft; // Atlantis
+$faker->spaceCompany; // SpaceX
+$faker->distanceMeasurement; // 43 kiloparsecs
+$faker->meteorite; // Qidong
+$faker->launchVehicle; // Saturn IV
 
 ```
 

@@ -3,20 +3,9 @@
 namespace Bezhanov\Tests\Faker\Provider;
 
 use Bezhanov\Faker\Provider\Demographic;
-use Faker\Factory;
-use PHPUnit\Framework\TestCase;
 
 class DemographicTest extends TestCase
 {
-    private $faker;
-
-    protected function setUp()
-    {
-        $faker = Factory::create();
-        $faker->addProvider(new Demographic($faker));
-        $this->faker = $faker;
-    }
-
     public function testRace()
     {
         $this->assertRegExp('/\w+/', $this->faker->race);

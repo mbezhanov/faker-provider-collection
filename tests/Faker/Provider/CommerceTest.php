@@ -2,21 +2,8 @@
 
 namespace Bezhanov\Tests\Faker\Provider;
 
-use Bezhanov\Faker\Provider\Commerce;
-use Faker\Factory;
-use PHPUnit\Framework\TestCase;
-
 class CommerceTest extends TestCase
 {
-    private $faker;
-
-    protected function setUp()
-    {
-        $faker = Factory::create();
-        $faker->addProvider(new Commerce($faker));
-        $this->faker = $faker;
-    }
-
     public function testPromotionCode()
     {
         $this->assertRegExp('#[a-z]+[a-z]+\d{6}#i', $this->faker->promotionCode);

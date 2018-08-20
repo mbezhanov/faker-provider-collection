@@ -2,21 +2,8 @@
 
 namespace Bezhanov\Tests\Faker\Provider;
 
-use Bezhanov\Faker\Provider\Avatar;
-use Faker\Factory;
-use PHPUnit\Framework\TestCase;
-
 class AvatarTest extends TestCase
 {
-    private $faker;
-
-    protected function setUp()
-    {
-        $faker = Factory::create();
-        $faker->addProvider(new Avatar($faker));
-        $this->faker = $faker;
-    }
-
     public function testAvatar()
     {
         $this->assertRegExp('#https://robohash.org/(.+).png#', $this->faker->avatar);

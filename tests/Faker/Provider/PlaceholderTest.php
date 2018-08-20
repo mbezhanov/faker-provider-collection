@@ -2,21 +2,8 @@
 
 namespace Bezhanov\Tests\Faker\Provider;
 
-use Bezhanov\Faker\Provider\Placeholder;
-use Faker\Factory;
-use PHPUnit\Framework\TestCase;
-
 class PlaceholderTest extends TestCase
 {
-    private $faker;
-
-    protected function setUp()
-    {
-        $faker = Factory::create();
-        $faker->addProvider(new Placeholder($faker));
-        $this->faker = $faker;
-    }
-
     public function testPlaceholder()
     {
         $this->assertRegExp('#https://placehold.it/(.+)(png?)#', $this->faker->placeholder);
