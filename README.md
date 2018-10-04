@@ -5,6 +5,14 @@
 
 A growing collection of useful Providers for [fzaninotto/faker](https://github.com/fzaninotto/faker) mostly ported to PHP from the [stympy/faker](https://github.com/stympy/faker) Ruby library.
 
+## Contents
+
+1. [Installation](#installation)
+1. [Basic Usage](#basic-usage)
+1. [Available Formatters](#formatters)
+1. [Integrations](#integrations)
+1. [Contributing](#contributing)
+
 ## Installation
 
 ```bash
@@ -212,6 +220,10 @@ $faker->team; // Oregon Tigers
 $faker->sport; // soccer
 
 ```
+
+## Integrations
+
+* [Laravel](https://github.com/mbezhanov/laravel-faker-provider-collection)
 
 ## Contributing
 
