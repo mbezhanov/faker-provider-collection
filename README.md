@@ -143,6 +143,20 @@ $faker->measurement; // 1 pint
 
 ```
 
+### `Bezhanov\Faker\Provider\Medicine`
+
+Generates fake medicine names.
+
+```php
+<?php
+
+$faker = \Faker\Factory::create();
+$faker->addProvider(new \Bezhanov\Faker\Provider\Medicine($faker));
+
+$faker->medicine; // Amphevorin
+
+```
+
 ### `Bezhanov\Faker\Provider\Placeholder`
 
 Generates URLs to placeholder images using the [Placeholder.com](https://placeholder.com/) image placeholder service.
@@ -203,6 +217,22 @@ $faker->spaceCompany; // SpaceX
 $faker->distanceMeasurement; // 43 kiloparsecs
 $faker->meteorite; // Qidong
 $faker->launchVehicle; // Saturn IV
+
+```
+
+### `Bezhanov\Faker\Provider\Species`
+
+Generates scientific names of fictional bird, animal, and plant species.
+
+```php
+<?php
+
+$faker = \Faker\Factory::create();
+$faker->addProvider(new \Bezhanov\Faker\Provider\Species($faker));
+
+echo $faker->bird . PHP_EOL; // Rostratula subis
+echo $faker->creature . PHP_EOL; // Latrodectus indri
+echo $faker->plant . PHP_EOL; // Pyrus filiformis
 
 ```
 
