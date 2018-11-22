@@ -19,10 +19,10 @@
     },
     "require": {
         "php": "^7.0",
-        "fzaninotto/faker": "^1.6",
-        "php-mock/php-mock": "^2.0"
+        "fzaninotto/faker": "^1.6"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.2"
+        "phpunit/phpunit": "^6.2",
+        "php-mock/php-mock": "^2.0"
     }
 }
