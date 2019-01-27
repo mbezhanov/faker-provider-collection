@@ -1,7 +1,8 @@
 # faker-provider-collection
 
-[![CircleCI](https://img.shields.io/circleci/project/github/mbezhanov/faker-provider-collection.svg)]()
-[![Codecov](https://img.shields.io/codecov/c/github/mbezhanov/faker-provider-collection.svg)]()
+[![CircleCI](https://img.shields.io/circleci/project/github/mbezhanov/faker-provider-collection.svg)](https://circleci.com/gh/mbezhanov/faker-provider-collection)
+[![Codecov](https://img.shields.io/codecov/c/github/mbezhanov/faker-provider-collection.svg)](https://codecov.io/gh/mbezhanov/faker-provider-collection)
+[![Packagist](https://img.shields.io/packagist/dt/mbezhanov/faker-provider-collection.svg)](https://packagist.org/packages/mbezhanov/faker-provider-collection)
 
 A growing collection of useful Providers for [fzaninotto/faker](https://github.com/fzaninotto/faker) mostly ported to PHP from the [stympy/faker](https://github.com/stympy/faker) Ruby library.
 
