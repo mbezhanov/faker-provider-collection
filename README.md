@@ -69,7 +69,9 @@ $faker->department; // Kids & Games
 $faker->department(6); // Games, Industrial, Books & Automotive
 $faker->department(3, true); // Jewelry, Music & Shoes
 $faker->productName; // Small Rubber Bottle
-
+$faker->brandName; // ABC
+$faker->brandName('B'); // Bimoli  
+$faker->brandName('C'); // Cadbury
 ```
 
 ### `Bezhanov\Faker\Provider\Device`

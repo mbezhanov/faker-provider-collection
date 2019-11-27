@@ -56,4 +56,9 @@ class CommerceTest extends TestCase
     {
         $this->assertRegExp('#^([a-z]+ ){2,3}[a-z]+$#i', $this->faker->productName());
     }
+
+    public function testBrandName()
+    {
+        $this->assertRegExp('#^([a-z]+ ){2,3}[a-z]+$#i', $this->faker->brandName());
+    }
 }

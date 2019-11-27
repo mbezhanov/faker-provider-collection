@@ -14,6 +14,12 @@ class Commerce extends Base
         'product' => ['Chair', 'Car', 'Computer', 'Gloves', 'Pants', 'Shirt', 'Table', 'Shoes', 'Hat', 'Plate', 'Knife', 'Bottle', 'Coat', 'Lamp', 'Keyboard', 'Bag', 'Bench', 'Clock', 'Watch', 'Wallet'],
     ];
 
+    protected static $brandName = [
+        'A' => ['ABC','Activia','Adem Sari','AdeS','Agel','Aice','Aim Biscuits','Ajinomoto','Alamina','Anchor','Anlene','Apollo','Aqua','Arirang','Arla','Arnott\'s','Arrow Brand','Ashitaki','Astor','Australia\'s Own Organic','Ayam Brand'],
+        'B' => ['Bamboe','Bango','Barco','Batagor','Beard Papa\'s','Belfoods','Bella','Belvita','Beng-Beng','Bernardi','Bertolli','Bihunku','Bimoli','Bintang','Bio Kul','Biokul','Biskitop','Blue Band','Borges','Bragg','Brookfarm','BSN','Buavita','Bulla','BXN'],
+        'C' => ['Cadbury','Calbee Wings','Calpico','Camel','Campbell\'s','Campina','Cap Enaak','Captain Oats','Carnation','Carnivor','CCO','Cedea','Ceremix','Ceres','Champ','Chatime','Cheetos','Chia-Yo','Chiki','Chips Ahoy','Chitato','Choki Choki','Chuba','Cimory','CNI','Coca-Cola','Colatta','Coolant','Country Choice']
+    ];
+
     protected static $promotionCode = [
         'adjective' => ['Amazing', 'Awesome', 'Cool', 'Good', 'Great', 'Incredible', 'Killer', 'Premium', 'Special', 'Stellar', 'Sweet'],
         'noun' => ['Code', 'Deal', 'Discount', 'Price', 'Promo', 'Promotion', 'Sale', 'Savings'],
@@ -60,5 +66,16 @@ class Commerce extends Base
         return static::randomElement(static::$productName['adjective'])
             . ' ' . static::randomElement(static::$productName['material'])
             . ' ' . static::randomElement(static::$productName['product']);
+    }
+
+    public function brandName($alphabet = 'A'): string
+    {
+        if (\strtoupper($alphabet) == 'A') {
+            $brands = static::randomElement(static::$brandName['A']);
+        } else {
+            $brands = static::randomElement(static::$brandName[$alphabet]);
+        }
+
+        return $brands;
     }
 }
