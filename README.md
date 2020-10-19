@@ -104,6 +104,8 @@ $faker->addProvider(new \Bezhanov\Faker\Provider\Demographic($faker));
 $faker->race; // Asian
 $faker->educationalAttainment; // Master's degree
 $faker->demonym; // Bulgarian
+$faker->language; // Spanish
+$faker->language(true); // es
 $faker->maritalStatus; // Married
 $faker->gender; // Female
 $faker->height; // 1.99
