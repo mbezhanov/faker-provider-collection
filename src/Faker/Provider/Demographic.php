@@ -33,7 +33,7 @@ class Demographic extends Base
 
     public function language($getIsoCode = false): string
     {
-        return $getIsoCode ? static::randomElement(static::$language) : static::randomElement(array_keys(static::$language));
+        return $getIsoCode ? static::randomElement(array_keys(static::$language)) : static::randomElement(static::$language);
     }
 
     public function maritalStatus(): string
