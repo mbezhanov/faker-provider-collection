@@ -105,7 +105,7 @@ $faker->race; // Asian
 $faker->educationalAttainment; // Master's degree
 $faker->demonym; // Bulgarian
 $faker->language; // Spanish
-$faker->language(true); // es
+$faker->language(true); // "es" -  ISO 639-1 language code
 $faker->maritalStatus; // Married
 $faker->gender; // Female
 $faker->height; // 1.99
