@@ -9,7 +9,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
     protected $faker;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->faker = Factory::create();
         ProviderCollectionHelper::addAllProvidersTo($this->faker);

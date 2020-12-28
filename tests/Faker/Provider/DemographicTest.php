@@ -8,22 +8,22 @@ class DemographicTest extends TestCase
 {
     public function testRace()
     {
-        $this->assertRegExp('/\w+/', $this->faker->race);
+        $this->assertMatchesRegularExpression('/\w+/', $this->faker->race);
     }
 
     public function testEducationalAttainment()
     {
-        $this->assertRegExp('/\w+/', $this->faker->educationalAttainment);
+        $this->assertMatchesRegularExpression('/\w+/', $this->faker->educationalAttainment);
     }
 
     public function testDemonym()
     {
-        $this->assertRegExp('/\w+/', $this->faker->demonym);
+        $this->assertMatchesRegularExpression('/\w+/', $this->faker->demonym);
     }
 
     public function testMaritalStatus()
     {
-        $this->assertRegExp('/\w+/', $this->faker->maritalStatus);
+        $this->assertMatchesRegularExpression('/\w+/', $this->faker->maritalStatus);
     }
 
     public function testGender()
@@ -33,11 +33,11 @@ class DemographicTest extends TestCase
 
     public function testHeightMetricUnits()
     {
-        $this->assertRegExp('/[\d]{1}\.[\d]{2}/', $this->faker->height);
+        $this->assertMatchesRegularExpression('/[\d]{1}\.[\d]{2}/', $this->faker->height);
     }
 
     public function testHeightImperialUnits()
     {
-        $this->assertRegExp('/[\d]{1} ft, [\d]{1,2} in/', $this->faker->height(Demographic::UNIT_TYPE_IMPERIAL));
+        $this->assertMatchesRegularExpression('/[\d]{1} ft, [\d]{1,2} in/', $this->faker->height(Demographic::UNIT_TYPE_IMPERIAL));
     }
 }

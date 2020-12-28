@@ -6,7 +6,7 @@ class PlaceholderTest extends TestCase
 {
     public function testPlaceholder()
     {
-        $this->assertRegExp('#https://placehold.it/(.+)(png?)#', $this->faker->placeholder);
+        $this->assertMatchesRegularExpression('#https://placehold.it/(.+)(png?)#', $this->faker->placeholder);
     }
 
     public function testPlaceholderWithCustomSize()
@@ -33,12 +33,12 @@ class PlaceholderTest extends TestCase
 
     public function testPlaceholderBackgroundWithCorrectSixCharHex()
     {
-        $this->assertRegExp('#^https://placehold.it/(.+)(jpg?)/ffffff$#', $this->faker->placeholder('300x300', 'jpg', 'ffffff'));
+        $this->assertMatchesRegularExpression('#^https://placehold.it/(.+)(jpg?)/ffffff$#', $this->faker->placeholder('300x300', 'jpg', 'ffffff'));
     }
 
     public function testPlaceholderBackgroundWithCorrectThreeCharHex()
     {
-        $this->assertRegExp('#^https://placehold.it/(.+)(jpg?)/fff$#', $this->faker->placeholder('300x300', 'jpg', 'fff'));
+        $this->assertMatchesRegularExpression('#^https://placehold.it/(.+)(jpg?)/fff$#', $this->faker->placeholder('300x300', 'jpg', 'fff'));
     }
 
     public function testPlaceholderBackgroundWithWrongSixCharHex()
@@ -61,12 +61,12 @@ class PlaceholderTest extends TestCase
 
     public function testPlaceholderFontColorWithCorrectSixCharHex()
     {
-        $this->assertRegExp('#^https://placehold.it/(.+)(jpg?)/ffffff/000000$#', $this->faker->placeholder('300x300', 'jpg', 'ffffff', '000000'));
+        $this->assertMatchesRegularExpression('#^https://placehold.it/(.+)(jpg?)/ffffff/000000$#', $this->faker->placeholder('300x300', 'jpg', 'ffffff', '000000'));
     }
 
     public function testPlaceholderFontColorWithCorrectThreeCharHex()
     {
-        $this->assertRegExp('#^https://placehold.it/(.+)(jpg?)/ffffff/000$#', $this->faker->placeholder('300x300', 'jpg', 'ffffff', '000'));
+        $this->assertMatchesRegularExpression('#^https://placehold.it/(.+)(jpg?)/ffffff/000$#', $this->faker->placeholder('300x300', 'jpg', 'ffffff', '000'));
     }
 
     public function testPlaceholderFontColorWithWrongSixCharHex()
@@ -89,11 +89,11 @@ class PlaceholderTest extends TestCase
 
     public function testPlaceholderTextNotPresent()
     {
-        $this->assertRegExp('#https://placehold.it/[^\\?]+$#', $this->faker->placeholder('300x300', 'jpg', 'fff', '000'));
+        $this->assertMatchesRegularExpression('#https://placehold.it/[^\\?]+$#', $this->faker->placeholder('300x300', 'jpg', 'fff', '000'));
     }
 
     public function testPlaceholderTextPresent()
     {
-        $this->assertRegExp('#https://placehold.it/(.+)\?text=hello#', $this->faker->placeholder('300x300', 'jpg', 'fff', '000', 'hello'));
+        $this->assertMatchesRegularExpression('#https://placehold.it/(.+)\?text=hello#', $this->faker->placeholder('300x300', 'jpg', 'fff', '000', 'hello'));
     }
 }

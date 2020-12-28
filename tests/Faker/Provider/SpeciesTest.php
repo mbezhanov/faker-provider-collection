@@ -8,7 +8,7 @@ class SpeciesTest extends TestCase
 {
     public function testBird()
     {
-        $this->assertRegExp('#(\w+){2}#', $this->faker->bird);
+        $this->assertMatchesRegularExpression('#(\w+){2}#', $this->faker->bird);
     }
 
     public function testCreature()
@@ -17,15 +17,15 @@ class SpeciesTest extends TestCase
         $mtRandMock = $this->buildMtRandMock($mtRandCallsCount);
         $mtRandMock->enable();
 
-        $this->assertRegExp('#(\w+){2}#', $this->faker->creature);
-        $this->assertRegExp('#(\w+){2}#', $this->faker->creature);
+        $this->assertMatchesRegularExpression('#(\w+){2}#', $this->faker->creature);
+        $this->assertMatchesRegularExpression('#(\w+){2}#', $this->faker->creature);
 
         $mtRandMock->disable();
     }
 
     public function testPlant()
     {
-        $this->assertRegExp('#(\w+){2}#', $this->faker->plant);
+        $this->assertMatchesRegularExpression('#(\w+){2}#', $this->faker->plant);
     }
 
     private function buildMtRandMock(&$counter)

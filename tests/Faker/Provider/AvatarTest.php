@@ -6,17 +6,17 @@ class AvatarTest extends TestCase
 {
     public function testAvatar()
     {
-        $this->assertRegExp('#https://robohash.org/(.+).png#', $this->faker->avatar);
+        $this->assertMatchesRegularExpression('#https://robohash.org/(.+).png#', $this->faker->avatar);
     }
 
     public function testAvatarWithCustomSlug()
     {
-        $this->assertRegExp('#https://robohash.org/faker.png#', $this->faker->avatar('faker'));
+        $this->assertMatchesRegularExpression('#https://robohash.org/faker.png#', $this->faker->avatar('faker'));
     }
 
     public function testAvatarWithCorrectSize()
     {
-        $this->assertRegExp('#https://robohash.org/faker.png\?size=150x320#', $this->faker->avatar('faker', '150x320'));
+        $this->assertMatchesRegularExpression('#https://robohash.org/faker.png\?size=150x320#', $this->faker->avatar('faker', '150x320'));
     }
 
     public function testAvatarWithIncorrectSize()
@@ -27,7 +27,7 @@ class AvatarTest extends TestCase
 
     public function testAvatarWithSupportedFormat()
     {
-        $this->assertRegExp('#https://robohash.org/faker.jpg\?size=300x300#', $this->faker->avatar('faker', '300x300', 'jpg'));
+        $this->assertMatchesRegularExpression('#https://robohash.org/faker.jpg\?size=300x300#', $this->faker->avatar('faker', '300x300', 'jpg'));
     }
 
     public function testAvatarWithUnsupportedFormat()
@@ -38,11 +38,11 @@ class AvatarTest extends TestCase
 
     public function testAvatarWithSet()
     {
-        $this->assertRegExp('#https://robohash.org/faker.jpg\?size=300x300&set=set2#', $this->faker->avatar('faker', '300x300', 'jpg', 'set2'));
+        $this->assertMatchesRegularExpression('#https://robohash.org/faker.jpg\?size=300x300&set=set2#', $this->faker->avatar('faker', '300x300', 'jpg', 'set2'));
     }
 
     public function testAvatarWithBgset()
     {
-        $this->assertRegExp('#https://robohash.org/faker.jpg\?size=300x300&set=set1&bgset=bg1#', $this->faker->avatar('faker', '300x300', 'jpg', 'set1', 'bg1'));
+        $this->assertMatchesRegularExpression('#https://robohash.org/faker.jpg\?size=300x300&set=set1&bgset=bg1#', $this->faker->avatar('faker', '300x300', 'jpg', 'set1', 'bg1'));
     }
 }

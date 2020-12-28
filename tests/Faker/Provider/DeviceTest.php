@@ -6,12 +6,12 @@ class DeviceTest extends TestCase
 {
     public function testModelName()
     {
-        $this->assertRegExp('/\w+/', $this->faker->deviceModelName);
+        $this->assertMatchesRegularExpression('/\w+/', $this->faker->deviceModelName);
     }
 
     public function testPlatform()
     {
-        $this->assertRegExp('/\w+/', $this->faker->devicePlatform);
+        $this->assertMatchesRegularExpression('/\w+/', $this->faker->devicePlatform);
     }
 
     public function testVersion()
@@ -30,11 +30,11 @@ class DeviceTest extends TestCase
 
     public function testManufacturer()
     {
-        $this->assertRegExp('/\w+/', $this->faker->deviceManufacturer);
+        $this->assertMatchesRegularExpression('/\w+/', $this->faker->deviceManufacturer);
     }
 
     public function testSerialNumber()
     {
-        $this->assertRegExp('/\w+/', $this->faker->deviceSerialNumber);
+        $this->assertMatchesRegularExpression('/\w+/', $this->faker->deviceSerialNumber);
     }
 }

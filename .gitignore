@@ -3,3 +3,4 @@
 /vendor/
 test.php
 clover.xml
+.phpunit.result.cache

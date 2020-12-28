@@ -6,6 +6,6 @@ class MedicineTest extends TestCase
 {
     public function testMedicine()
     {
-        $this->assertRegExp('#\w+#', $this->faker->medicine);
+        $this->assertMatchesRegularExpression('#\w+#', $this->faker->medicine);
     }
 }

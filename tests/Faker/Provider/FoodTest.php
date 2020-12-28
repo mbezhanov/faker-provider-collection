@@ -6,12 +6,12 @@ class FoodTest extends TestCase
 {
     public function testIngredient()
     {
-        $this->assertRegExp('#\w+#', $this->faker->ingredient);
+        $this->assertMatchesRegularExpression('#\w+#', $this->faker->ingredient);
     }
 
     public function testSpice()
     {
-        $this->assertRegExp('#\w+#', $this->faker->spice);
+        $this->assertMatchesRegularExpression('#\w+#', $this->faker->spice);
     }
 
     public function testMeasurement()
