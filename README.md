@@ -68,6 +68,7 @@ $faker->promotionCode; // KillerPromotion257835
 $faker->department; // Kids & Games
 $faker->department(6); // Games, Industrial, Books & Automotive
 $faker->department(3, true); // Jewelry, Music & Shoes
+$faker->category; // Computers
 $faker->productName; // Small Rubber Bottle
 
 ```
