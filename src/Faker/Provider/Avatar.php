@@ -8,7 +8,7 @@ class Avatar extends Base
 {
     protected static $supportedFormats = ['png', 'jpg', 'bmp'];
 
-    public function avatar(string $slug = null, string $size = '300x300', string $format = 'png', string $set = 'set1', string $bgset = null): string
+    public function avatar(?string $slug = null, string $size = '300x300', string $format = 'png', string $set = 'set1', ?string $bgset = null): string
     {
         if (!preg_match('/^[0-9]+x[0-9]+$/', $size)) {
             throw new \InvalidArgumentException('Size should be specified in format 300x300');
